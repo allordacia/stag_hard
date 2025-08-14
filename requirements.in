@@ -1,0 +1,19 @@
+ram @ git+https://github.com/xinyu1205/recognize-anything.git@88c2b0ca13e38cca6655f83ad0185271167dbcbf
+beautifulsoup4
+huggingface
+huggingface-hub
+lxml
+pillow
+pillow_heif
+rawpy>=0.23.1
+pyinstaller
+tkinter-tooltip
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.6.0+cpu; sys_platform == 'linux'
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+torchaudio==2.6.0+cpu; sys_platform == 'linux'
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+torchvision==0.21.0+cpu; sys_platform == 'linux'
