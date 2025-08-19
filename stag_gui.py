@@ -18,7 +18,7 @@ import huggingface_hub
 from huggingface_hub import hf_hub_download
 from tktooltip import ToolTip
 
-from stag import SKTagger
+from stag import SKTagger, VERSION
 
 
 class TextRedirector:
@@ -49,7 +49,7 @@ class TextRedirector:
 class StagGUI:
     """Main GUI class for the STAG application."""
     
-    VERSION = "1.0.1"
+    # Version is imported from stag module
     DEFAULT_PREFIX = "st"
     MODEL_REPO_ID = "xinyu1205/recognize-anything-plus-model"
     MODEL_FILENAME = "ram_plus_swin_large_14m.pth"
@@ -236,7 +236,7 @@ class StagGUI:
         stag_logo_label = ttk.Label(logo_frame, image=self.stag_logo_photo)
         stag_logo_label.pack()
         
-        version_label = ttk.Label(logo_frame, text=f"Version {self.VERSION}")
+        version_label = ttk.Label(logo_frame, text=f"Version {VERSION}")
         version_label.pack()
         
         # DIVISIO logo and info

@@ -11,6 +11,9 @@ import threading
 from pathlib import Path
 from typing import List, Optional, Tuple
 
+# Version information
+VERSION = "1.0.2"
+
 import rawpy
 import torch
 from huggingface_hub import hf_hub_download
