@@ -44,7 +44,7 @@ To install STAG, simply download the binary for your platform from the [Releases
 
 1. **Launch the Application**: Run the STAG executable for your operating system.
 2. **Select Image Directory**: Use the graphical interface to browse and select the directory containing your images. 
-3. **Set Tag Prefix**: Either accept the default ("st") prefix or enter a custom one. This helps in organizing and identifying STAG-generated tags.
+3. **Set Tag Prefix**: Either accept the default ("st") prefix, enter a custom one, or leave it empty to use no prefix at all (though this is not recommended). The prefix helps in organizing and identifying STAG-generated tags.
 4. **Choose Options**:
     - Decide whether to skip images that have already been tagged by STAG.
     - Opt to simulate the tagging process without making any changes (useful for testing).
@@ -114,7 +114,14 @@ Activate it:
 
 Install Dependencies
 
-    pip install -r requirements.txt
+    # Install pip-tools
+    pip install pip-tools
+    
+    # Generate requirements.txt from requirements.in
+    pip-compile
+    
+    # Install the dependencies
+    pip-sync
 
 ...and start hacking away. For example, run the command line tool for testing:
 
