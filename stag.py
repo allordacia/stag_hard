@@ -92,6 +92,7 @@ class SKTagger:
         print(f"STAG using device: {self.device}")
         
         # Load and prepare model
+        # self.model = ram_plus(pretrained=model_path, image_size=image_size, vit='swin_l')
         self.model = ram_plus(pretrained=model_path, image_size=image_size, vit='swin_l')
         self.model.eval()
         self.model = self.model.to(self.device)
@@ -304,10 +305,11 @@ def main():
     args = parser.parse_args()
     
     # Download the model
-    pretrained = hf_hub_download(
-        repo_id="xinyu1205/recognize-anything-plus-model",
-        filename="ram_plus_swin_large_14m.pth"
-    )
+    # pretrained = hf_hub_download(
+    #     repo_id="xinyu1205/recognize-anything-plus-model",
+    #     filename="ram_plus_swin_large_14m.pth"
+    # )
+    pretrained = '/models/model.safetensors'  # Path to the local model file
 
     # Create and run the tagger
     tagger = SKTagger(
